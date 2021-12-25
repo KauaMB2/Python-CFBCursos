@@ -1,0 +1,15 @@
+from tkinter import *
+def mostrarValor():
+    ve = sc_escala.get()
+    print("Valor selecionado: " + str(ve))
+app = Tk()
+app.title("CFB Cursos")
+app.geometry("500x300")
+ib_valor = Label(app, text = "Valor")
+ib_valor.pack()
+sc_escala = Scale(app, from_= 0, to = 100, orient = HORIZONTAL)
+sc_escala.set(50)
+sc_escala.pack()
+btn_esportes = Button(app, text = "Valor selecionado", command = mostrarValor)
+btn_esportes.pack()
+app.mainloop()
